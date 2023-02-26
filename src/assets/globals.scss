@@ -1,0 +1,53 @@
+$colorPrimary: #0094FF;
+$colorWhiteText: #fff;
+$colorSuccess: #00B0A6;
+$colorError: #FF5962;
+$colorMainDisabled: #B6BABF;
+$colorSecondDisabled: #fff;
+
+
+@mixin text-format($font-weight, $font-size, $line-height) {
+  font-family: sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

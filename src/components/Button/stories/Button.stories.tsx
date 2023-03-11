@@ -14,4 +14,4 @@ export default {
 
 export const AccordionStoryTemplate: Story<ButtonProps> = ({ ...args }) => <Button {...args}>Button</Button>
 
-AccordionStoryTemplate.storyName = 'Button'
+AccordionStoryTemplate.storyName = 'Button '

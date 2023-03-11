@@ -12,9 +12,10 @@ export const Typography: FC<TypographyProps> = ({ children, variant = 'p', sx })
   const classTypography = 'bui-typography '
   const classVariant = `bui-typography_${variant} `
   const styleSx = JSON.stringify(sx)?.replace(/["'{}]/g, '')
+  const mainClassNames = [classTypography, classVariant]
 
   const textGeneration = `<${variant} style='${styleSx}'
-    class='${classTypography + classVariant}'>${children}</${variant}>`
+    class='${mainClassNames.join(' ')}'>${children}</${variant}>`
 
   return <span className='typography' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(textGeneration) }} />
 }

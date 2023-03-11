@@ -13,4 +13,4 @@ export default {
 
 export const AccordionStoryTemplate: Story<SelectCardProps> = ({ ...args }) => <SelectCard {...args} />
 
-AccordionStoryTemplate.storyName = 'SelectCard'
+AccordionStoryTemplate.storyName = 'Select Card'

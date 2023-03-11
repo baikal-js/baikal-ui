@@ -1,0 +1,30 @@
+@import "../../../core/styles/mixins";
+
+.bui-typography {
+  width: 100%;
+  @include reset();
+  color: #333;
+
+  &_h1 {
+    @include text-format(700, 96px, 112px);
+  }
+  &_h2 {
+    @include text-format(400, 60px, 72px);
+  }
+  &_h3 {
+    @include text-format(400, 48px, 56px);
+  }
+  &_h4 {
+    @include text-format(400, 34px, 42px);
+  }
+  &_h5 {
+    @include text-format(400, 24px, 32px);
+  }
+  &_h6 {
+    @include text-format(400, 20px, 32px);
+  }
+
+  &_p {
+    @include text-format(400, 14px, 18px);
+  }
+}

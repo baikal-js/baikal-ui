@@ -1,6 +1,2 @@
-import Button from './components/button'
-
-
-export {
-  Button
-}
+import './core/styles/global.scss'
+export * from './components'

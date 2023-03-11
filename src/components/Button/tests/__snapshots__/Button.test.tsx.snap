@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for component Button should be mounted mounted active button 1`] = `
+<DocumentFragment>
+  <button
+    class="bui-btn bui-btn-variant_bordered bui-btn-size_small "
+    type="button"
+  >
+    Active button
+  </button>
+</DocumentFragment>
+`;
+
+exports[`tests for component Button should be mounted mounted disabled button 1`] = `
+<DocumentFragment>
+  <button
+    class="bui-btn bui-btn-variant_filled bui-btn-size_middle bui-btn-disabled_filled bui-btn-disabled"
+    disabled=""
+    type="button"
+  >
+    Disabled button
+  </button>
+</DocumentFragment>
+`;

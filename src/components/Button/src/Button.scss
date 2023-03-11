@@ -1,0 +1,72 @@
+@import "../../../core/styles/mixins";
+
+.bui-btn {
+  border: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  @include text-format(700, 15px, 20px);
+  @include reset;
+  color: #0094FF;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: transform ease-in-out 0.04s;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &-variant {
+    &_default {
+      border: 1.5px solid #fff;
+    }
+
+    &_bordered {
+      border: 1.5px solid #0094FF;
+    }
+
+    &_filled {
+      border: 1.5px solid #0094FF;
+      background-color: #0094FF;
+      color: #fff;
+    }
+  }
+
+  &-size {
+    &_small {
+      padding: 6px 14px;
+    }
+
+    &_middle {
+      padding: 8px 18px;
+    }
+
+    &_large {
+      padding: 10px 22px;
+    }
+  }
+
+  &-disabled {
+    background-color: #EFEFEF;
+    color: #848789;
+    cursor: default;
+
+    &_default {
+      border: 1.5px solid #EFEFEF;
+    }
+
+    &_filled {
+      border: 1.5px solid #EFEFEF;
+    }
+
+    &_bordered {
+      border: 1.5px solid #848789;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

@@ -4,4 +4,4 @@ build
 /config
 /scripts
 /tests
-jest.config.js
+jest.config.ts

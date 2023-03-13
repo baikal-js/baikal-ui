@@ -1,1 +1,1 @@
-export { SelectCard } from './src/SelectCard'
+export { SelectCard } from './SelectCard'

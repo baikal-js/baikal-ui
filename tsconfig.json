@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "noImplicitAny": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "module": "ESNext",
     "declaration": true,
     "declarationDir": "types",

@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, useState } from 'react'
 import './SelectCard.scss'
-import { Button } from '../../Button'
-import { Typography } from '../../Typography'
+import { Button } from '../Button'
+import { Typography } from '../Typography'
 
 export interface SelectCardProps {
   cards: string[]

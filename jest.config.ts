@@ -1,4 +1,4 @@
-module.exports = {
+  module.exports = {
   preset: 'ts-jest',
   verbose: true,
   testEnvironment: 'jsdom',

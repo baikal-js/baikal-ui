@@ -30,7 +30,8 @@ module.exports = [
         extract: 'index.css',
         modules: true,
         use: ['sass'],
-        minimize: true
+        minimize: true,
+        autoModules: true,
       }),
       svgr({ icon: true }),
       terser()

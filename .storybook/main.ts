@@ -7,26 +7,12 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/preset-scss",
-    {
-      name: "storybook-css-modules",
-      options: {
-        cssModulesLoaderOptions: {
-          importLoaders: 1,
-          modules: {
-            getLocalIdent,
-          },
-        },
-      },
-    },
+    '@storybook/preset-scss'
   ],
-  options: {
-    modules: true,
-  },
   core: {
     builder: "webpack5"
   },
-  webpackFinal: (config) => {
+  webpackFinal: (config: any) => {
     config.resolve.modules = [...(config.resolve.modules || []), "./src"];
     config.module.rules = [
       ...(config.module.rules || []),

@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import './Button.scss'
+import s from './Button.module.scss'
 
 export interface ButtonProps {
   children: ReactNode
@@ -16,14 +16,14 @@ export const Button: FC<ButtonProps> = ({
   disabled = false,
   onClick,
 }) => {
-  const classBtn = 'bui-btn'
-  const classVariant = `bui-btn-variant_${variant}`
-  const classDisabled = `bui-btn-size_${size} ${disabled ? `bui-btn-disabled_${variant} bui-btn-disabled` : ''}`
+  const classBtn = s.buiBtn
+  // const classVariant = `${s.btn}_${variant}`
+  // const classDisabled = `${s.btn}_${size} ${disabled ? `btn-disabled_${variant} btn-disabled` : ''}`
 
-  const mainClassNames = [classBtn, classVariant, classDisabled]
+  // const mainClassNames = [classBtn, classVariant, classDisabled]
 
   return (
-    <button className={mainClassNames.join(' ')} type='button' disabled={disabled} onClick={onClick}>
+    <button className={s.buiBtn} type='button' disabled={disabled} onClick={onClick}>
       {children}
     </button>
   )

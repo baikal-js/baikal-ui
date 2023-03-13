@@ -1,1 +1,1 @@
-export { Typography } from './src/Typography'
+export { Typography } from './Typography'

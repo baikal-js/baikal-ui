@@ -26,4 +26,4 @@ module.exports = {
     return config;
   },
   framework: "@storybook/react",
-};
+}

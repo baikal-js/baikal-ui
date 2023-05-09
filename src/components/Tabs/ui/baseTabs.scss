@@ -1,0 +1,8 @@
+
+
+$tab-bg-color-active: #42c987;
+$tab-bg-color: #8bd8bd;
+
+@function px($value) {
+  @return #{$value}px;
+}

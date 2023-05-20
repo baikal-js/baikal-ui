@@ -12,7 +12,7 @@ export default {
 } as Meta<TypographyProps>
 
 export const AccordionStoryTemplate: Story<TypographyProps> = ({ ...args }) => (
-  <Typography {...args}>Как переводится «озеро»?</Typography>
+  <Typography {...args}>Заголовок</Typography>
 )
 
 AccordionStoryTemplate.storyName = 'Typography'

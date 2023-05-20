@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Checkbox as CheckboxComponent } from '../../index'
 
 export default {
-  title: 'components/inputs/Checkbox',
+  title: 'components/Checkbox',
   component: CheckboxComponent,
 } as Meta<typeof CheckboxComponent>
 
@@ -14,13 +14,13 @@ export const Checkbox: Story = {
     <div
       style={{
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
         gap: '10px',
       }}
     >
-      <CheckboxComponent checked />
       <CheckboxComponent />
+      <CheckboxComponent checked />
+      <CheckboxComponent disabled />
+      <CheckboxComponent checked disabled />
     </div>
   ),
 }

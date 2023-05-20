@@ -1,5 +1,6 @@
 @import "../../../core/styles/variables";
 @import "../../../core/styles/mixins";
+@import "../../../core/styles/animations";
 
 .bui-btn {
   margin: 0;
@@ -21,8 +22,8 @@
     background-color: $hover;
   }
 
-  &:active {
-    outline: 2px solid $focus;
+  &-animate {
+    animation: $animationOutline2px;
   }
 
   &-disabled {
@@ -41,7 +42,7 @@
 
   &-icon {
     svg {
-      margin-right: 5px;
+      margin-left: 5px;
     }
 
     svg path {
@@ -59,7 +60,7 @@
     background-color: $filled;
     color: $primary;
     padding: 11px 15px;
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid $purple;
     transition: border ease-in-out 0.1s;
 
     &:hover {
@@ -69,7 +70,7 @@
 
     &-icon {
       svg {
-        margin-right: 5px;
+        margin-left: 5px;
       }
       svg path {
         fill: $primary;
@@ -80,9 +81,51 @@
       background-color: $bgDisabled;
       color: $contentDisabled;
       cursor: default;
+      border-color: rgba(0,0,0,0);
 
       &:hover {
         background-color: $bgDisabled;
+        border-color: rgba(0,0,0,0);
+      }
+
+      &:active {
+        outline: none;
+      }
+
+      svg path {
+        fill: $contentDisabled;
+      }
+    }
+  }
+
+  &-pured{
+    background-color: initial;
+    color: $primary;
+    padding: 11px 16px;
+    border: none;
+    transition: border ease-in-out 0.1s, background-color ease-in-out 0.1s;
+
+    &:hover {
+      background-color: $filled;
+    }
+
+    &-icon {
+      svg {
+        margin-left: 5px;
+      }
+      svg path {
+        fill: $primary;
+      }
+    }
+
+    &-disabled {
+      background-color: initial;
+      color: $contentDisabled;
+      cursor: default;
+      border-color: rgba(0,0,0,0);
+
+      &:hover {
+        background-color: initial;
         border-color: rgba(0,0,0,0);
       }
 

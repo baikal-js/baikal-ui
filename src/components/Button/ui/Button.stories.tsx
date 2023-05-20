@@ -2,6 +2,7 @@ import React from 'react'
 import { Button as ButtonComponent } from '../index'
 import type { Meta, StoryObj } from '@storybook/react'
 import { RightArrow } from '../../Icons'
+import { BorderZone } from '../../BorderZone'
 
 export default {
   title: 'components/buttons/Buttons',
@@ -12,11 +13,12 @@ type Story = StoryObj<typeof ButtonComponent>
 
 export const Buttons: Story = {
   render: () => (
-    <div
+    <BorderZone
       style={{
         display: 'flex',
         flexDirection: 'column',
         gap: '10px',
+        maxWidth: '610px',
       }}
     >
       <div
@@ -49,6 +51,24 @@ export const Buttons: Story = {
           Button With Icon
         </ButtonComponent>
       </div>
-    </div>
+
+      <div
+        style={{
+          display: 'flex',
+          gap: '10px',
+        }}
+      >
+        <ButtonComponent variant='pured'>Button</ButtonComponent>
+        <ButtonComponent variant='pured' icon={<RightArrow />}>
+          Button With Icon
+        </ButtonComponent>
+        <ButtonComponent variant='pured' disabled>
+          Button Disabled
+        </ButtonComponent>
+        <ButtonComponent variant='pured' icon={<RightArrow />} disabled>
+          Button With Icon
+        </ButtonComponent>
+      </div>
+    </BorderZone>
   ),
 }

@@ -1,18 +1,31 @@
-import React, { FC } from 'react'
+import React, { FC, InputHTMLAttributes } from 'react'
 import './Checkbox.scss'
+import { classNames } from '../../../core/libs'
 
 export interface ICheckbox {
-  label?: string
-  name?: string
-  checked?: boolean
+  formField?: any
+  children?: string
+  disabled?: boolean
+  error?: boolean
 }
 
-const Checkbox: FC<ICheckbox> = ({ label, name, checked }) => {
+const Checkbox: FC<ICheckbox & InputHTMLAttributes<HTMLInputElement>> = ({
+  formField,
+  disabled,
+  children,
+  className,
+  error,
+  ...otherProps
+}) => {
+  const wrapperClassName = classNames('bui-checkbox__input', {}, [className])
+  const labelClassName = classNames('bui-checkbox__label', { 'bui-checkbox__error': Boolean(error) })
+
   return (
     <div className='bui-checkbox'>
-      {label ? <label className='bui-checkbox__label' htmlFor={name} /> : null}
-      <input className='bui-checkbox__input' type='checkbox' checked={checked} />
-      <label className='bui-checkbox__label' htmlFor={name} />
+      <input id={formField} className={wrapperClassName} type='checkbox' disabled={disabled} {...otherProps} />
+      <label className={labelClassName} htmlFor={formField}>
+        {children}
+      </label>
     </div>
   )
 }

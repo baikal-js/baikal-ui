@@ -1,10 +1,10 @@
-import React, { FC, HTMLAttributes } from 'react'
-import { classNames } from '../../../core/libs'
+import React, { FC, HTMLAttributes, useEffect, useState } from 'react'
+import { classNames } from 'core/libs'
 import './Button.scss'
 
 export interface ButtonProps {
   children: string
-  variant?: 'primary' | 'filled' | 'bordered' | 'pured'
+  variant?: 'primary' | 'filled' | 'pured'
   disabled?: boolean
   onClick?: () => void | Event
   icon?: JSX.Element
@@ -20,9 +20,12 @@ const Button: FC<HTMLAttributes<HTMLButtonElement> & ButtonProps> = ({
   icon,
   ...otherProps
 }) => {
+  const [animate, setAnimate] = useState<boolean>(false)
+
   const classBtn = classNames(
     'bui-btn',
     {
+      'bui-btn-animate': animate,
       'bui-btn-disabled': disabled && !variant,
       'bui-btn-icon': Boolean(icon) && !variant,
       'bui-btn-icon-disabled': disabled && Boolean(icon) && !variant,
@@ -32,10 +35,22 @@ const Button: FC<HTMLAttributes<HTMLButtonElement> & ButtonProps> = ({
     [className],
   )
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAnimate(false)
+    }, 300)
+    return () => clearTimeout(timeout)
+  }, [animate])
+
+  const onClickHandler = () => {
+    setAnimate(true)
+    onClick()
+  }
+
   return (
-    <button className={classBtn} type='button' disabled={disabled} onClick={onClick} {...otherProps}>
-      {icon}
+    <button className={classBtn} onClick={onClickHandler} type='button' disabled={disabled} {...otherProps}>
       {children}
+      {icon}
     </button>
   )
 }

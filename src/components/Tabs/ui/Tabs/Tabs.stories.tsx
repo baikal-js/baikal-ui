@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Tabs as TabsComponent } from '../../index'
+import { BorderZone } from '../../../BorderZone'
 
 export default {
   title: 'components/Tabs',
@@ -11,7 +12,7 @@ type Story = StoryObj<typeof TabsComponent>
 
 export const Tabs: Story = {
   render: () => (
-    <div
+    <BorderZone
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -42,6 +43,6 @@ export const Tabs: Story = {
           },
         ]}
       />
-    </div>
+    </BorderZone>
   ),
 }

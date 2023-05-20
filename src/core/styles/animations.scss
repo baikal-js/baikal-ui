@@ -1,0 +1,18 @@
+@import "variables";
+
+$animationOutline2px: 0.5s ease-in animateOutline2px;
+
+@keyframes animateOutline2px {
+
+  20% {
+    outline: 2px solid rgba(216, 208, 255, 0.7);
+  }
+
+  70% {
+    outline: 2px solid rgba(216, 208, 255, 0.1);
+  }
+
+  100% {
+    outline: 2px solid rgba(216, 208, 255, 0);
+  }
+}

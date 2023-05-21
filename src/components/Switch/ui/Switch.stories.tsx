@@ -18,6 +18,7 @@ export const Switch: Story = {
       }}
     >
       <SwitchComponent />
+      <SwitchComponent checked />
     </div>
   ),
 }

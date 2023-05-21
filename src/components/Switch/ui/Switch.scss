@@ -1,4 +1,41 @@
+@import "src/core/styles/variables";
+@import "src/core/styles/mixins";
 
 .bui-switch {
+  @include reset;
+  padding: 2px;
+  border-radius: 50px;
+  background-color: $contentSwitch;
+  border: none;
+  width: 45px;
+  height: 22px;
+  cursor: pointer;
 
+  &-checked {
+    background-color: $primary;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+
+
+  &__circle {
+    position: absolute;
+    display: block;
+    background-color: $white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    left: 0;
+
+    &-checked {
+      left: inherit;
+      right: 0;
+    }
+  }
 }

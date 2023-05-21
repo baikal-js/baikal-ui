@@ -5,14 +5,14 @@ $animationOutline2px: 0.5s ease-in animateOutline2px;
 @keyframes animateOutline2px {
 
   20% {
-    outline: 2px solid rgba(216, 208, 255, 0.7);
+    outline: 3px solid rgba(216, 208, 255, 1);
   }
 
   70% {
-    outline: 2px solid rgba(216, 208, 255, 0.1);
+    outline: 3px solid rgba(216, 208, 255, 0.1);
   }
 
   100% {
-    outline: 2px solid rgba(216, 208, 255, 0);
+    outline: 3px solid rgba(216, 208, 255, 0);
   }
 }

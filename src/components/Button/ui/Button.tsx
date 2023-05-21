@@ -42,9 +42,9 @@ const Button: FC<HTMLAttributes<HTMLButtonElement> & ButtonProps> = ({
     return () => clearTimeout(timeout)
   }, [animate])
 
-  const onClickHandler = () => {
+  const onClickHandler = (event?: any) => {
     setAnimate(true)
-    onClick()
+    onClick(event)
   }
 
   return (
